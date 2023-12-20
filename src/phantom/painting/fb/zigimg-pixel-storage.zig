@@ -83,12 +83,12 @@ fn read(ctx: *anyopaque, i: usize, buf: []u8) anyerror!void {
     const self: *Self = @ptrCast(@alignCast(ctx));
 
     var iter = zigimg.color.PixelStorageIterator.init(&self.value);
-    iter.current_index = i / self.value.len();
+    iter.current_index = i / 4;
 
     var x: usize = 0;
-    const end = buf.len / self.value.len();
+    const end = buf.len / 4;
     while (x < end) : (x += 1) {
-        const index = x * self.value.len();
+        const index = x * 4;
         const value = (iter.next() orelse return error.OutOfBounds).toRgba32();
 
         if (index < buf.len) buf[index] = value.r;

@@ -44,7 +44,7 @@ fn info(ctx: *anyopaque) phantom.painting.image.Base.Info {
         .res = .{ .value = .{ self.value.width, self.value.height } },
         .colorspace = .sRGB,
         .colorFormat = .{ .rgba = @splat(8) },
-        .seqCount = @min(self.value.animation.frames.items.len, 1),
+        .seqCount = @max(self.value.animation.frames.items.len, 1),
     };
 }
 
