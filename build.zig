@@ -30,7 +30,7 @@ pub fn build(b: *std.Build) void {
         .@"no-importer" = no_importer,
     });
 
-    const module = b.addModule("phantom.image.gif", .{
+    const module = b.addModule("phantom.compat.zigimg", .{
         .source_file = .{ .path = b.pathFromRoot("src/phantom.zig") },
         .dependencies = &.{
             .{
