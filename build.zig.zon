@@ -4,16 +4,16 @@
   .paths = .{"."},
   .dependencies = .{
     .phantom = .{
-      .url = "https://github.com/PhantomUIx/core/archive/8722bd0ae15725d10d8e394cab550c29448c79ad.tar.gz",
-      .hash = "12207e70d80d46650c4318dec90ffcda00f20f2fba2e08ca3b0223b38a1fa48b7120",
+      .url = "https://github.com/PhantomUIx/core/archive/63912d18801ae6190ab4ce15d2fd8303b797d649.tar.gz",
+      .hash = "1220fcd5a5f024f9d9d40dd68c09f3a678fe73a40120d27b415156b81690cf5d91f4",
     },
     .vizops = .{
-      .url = "https://github.com/MidstallSoftware/vizops/archive/8b8499e195d8cf66e9b13ed1c80b24ee27420a29.tar.gz",
-      .hash = "1220f478cda5edf75a0b837e04c741631e4136e422b4257ccbd09d4cccaf736ac312",
+      .url = "https://github.com/MidstallSoftware/vizops/archive/75ed00f8eb217d774878fc0416d882b5ebce2b07.tar.gz",
+      .hash = "1220f72b311022cffc91f2b08f1e958bf60e1ae0c4f84b7116b1de17ddfbad9b71e3",
     },
     .zigimg = .{
-      .url = "https://github.com/zigimg/zigimg/archive/b269e44d8162abfa4e36a372136e53958dd62b12.tar.gz",
-      .hash = "12203ee2ea8bd9593f3f27a0d8b3253f76a0c2f97d0476925083abf4f703d8ef4310",
+      .url = "https://github.com/zigimg/zigimg/archive/ad6ad042662856f55a4d67499f1c4606c9951031.tar.gz",
+      .hash = "1220bf6b616ca219f95be1205b12aa8cdb7e09838fcebeae90b48b5ab0a030c5ab45",
     },
   },
 }
