@@ -5,6 +5,10 @@ on:
     - cron: '0 0 * * *'
   workflow_dispatch: {}
 
+permissions:
+  pull-requests: write
+  contents: write
+
 jobs:
   update-phantom:
     runs-on: ubuntu-latest
@@ -20,8 +24,10 @@ jobs:
       - name: Update Phantom UI
         run: |
           export PHANTOM_SHA=$(git -C phantom-core rev-parse HEAD)
+          export PHANTOM_SHA_SHORT=$(echo "$PHANTOM_SHA" | cut -c 1-6)
+          echo "PHANTOM_SHA=$PHANTOM_SHA" >> $GITHUB_ENV
+          echo "PHANTOM_SHA_SHORT=$PHANTOM_SHA_SHORT" >> $GITHUB_ENV
           pushd main
-          git switch -c update-phantom/$PHANTOM_SHA
           zig fetch --save=phantom https://github.com/PhantomUIx/core/archive/$PHANTOM_SHA.tar.gz
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
@@ -32,11 +38,12 @@ jobs:
           else
             export HAS_CHANGES=no
           fi
+          echo "HAS_CHANGES=$HAS_CHANGES" >> $GITHUB_ENV
           popd
       - name: Open PR
         uses: peter-evans/create-pull-request@v5
-        if: env.HAS_CHANGES == 'yes'
+        if: ${{ env.HAS_CHANGES == 'yes' }}
         with:
           title: "Update Phantom UI core to ${{ env.PHANTOM_SHA }}"
-          branch: update-phantom/${{ env.PHANTOM_SHA }}
+          branch: update-phantom/${{ env.PHANTOM_SHA_SHORT }}
           path: main

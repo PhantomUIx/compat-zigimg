@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - master
+      - update-phantom/*
   pull_request:
     branches:
       - master
+      - update-phantom/*
     tags:
       - "v*.*.*"
 
