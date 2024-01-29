@@ -1,19 +1,19 @@
 .{
-  .name = "phantom.compat.zigimg",
-  .version = "0.1.0",
-  .paths = .{"."},
-  .dependencies = .{
-    .phantom = .{
-      .url = "https://github.com/PhantomUIx/core/archive/ba3a93a0dba0037e33e56eca741a6f31616c9bdd.tar.gz",
-      .hash = "1220d1b9faa83c0ec7a8a67a3034b898eebaab93023a84c37a5a5e7833ad328fcc85",
+    .name = "phantom.compat.zigimg",
+    .version = "0.1.0",
+    .paths = .{"."},
+    .dependencies = .{
+        .phantom = .{
+            .url = "https://github.com/PhantomUIx/core/archive/13cb70007519475065743509e3a908c7105ded1d.tar.gz",
+            .hash = "12203b3735b8056b34491d5aa777ca5689d1031b1be03690f2cb5b18f6bacd42424f",
+        },
+        .vizops = .{
+            .url = "https://github.com/MidstallSoftware/vizops/archive/75ed00f8eb217d774878fc0416d882b5ebce2b07.tar.gz",
+            .hash = "1220f72b311022cffc91f2b08f1e958bf60e1ae0c4f84b7116b1de17ddfbad9b71e3",
+        },
+        .zigimg = .{
+            .url = "https://github.com/zigimg/zigimg/archive/ad6ad042662856f55a4d67499f1c4606c9951031.tar.gz",
+            .hash = "1220bf6b616ca219f95be1205b12aa8cdb7e09838fcebeae90b48b5ab0a030c5ab45",
+        },
     },
-    .vizops = .{
-      .url = "https://github.com/MidstallSoftware/vizops/archive/75ed00f8eb217d774878fc0416d882b5ebce2b07.tar.gz",
-      .hash = "1220f72b311022cffc91f2b08f1e958bf60e1ae0c4f84b7116b1de17ddfbad9b71e3",
-    },
-    .zigimg = .{
-      .url = "https://github.com/zigimg/zigimg/archive/ad6ad042662856f55a4d67499f1c4606c9951031.tar.gz",
-      .hash = "1220bf6b616ca219f95be1205b12aa8cdb7e09838fcebeae90b48b5ab0a030c5ab45",
-    },
-  },
 }
