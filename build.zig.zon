@@ -4,8 +4,8 @@
     .paths = .{"."},
     .dependencies = .{
         .phantom = .{
-            .url = "https://github.com/PhantomUIx/core/archive/4400144d29d7c25723ccc4a5c10f1e6ce5e14c12.tar.gz",
-            .hash = "1220bd1fab2b326ec69bb8e7f1ff133d3a094402e3d92f6f3f3c2cc6e1a17097c083",
+            .url = "https://github.com/PhantomUIx/core/archive/eee1888f355189ab95d632b426cba9b9d79940e5.tar.gz",
+            .hash = "12202c0e3796df3140077bb34c68d7a3893090a7ad2c13844fb58ff399501780af9e",
         },
         .vizops = .{
             .url = "https://github.com/MidstallSoftware/vizops/archive/75ed00f8eb217d774878fc0416d882b5ebce2b07.tar.gz",
